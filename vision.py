@@ -8,6 +8,8 @@ import random
 import numpy as np
 
 chatStr = ""
+
+# Function to have a conversation with the AI
 def chat(query):
     global chatStr
     print(chatStr)
@@ -26,6 +28,7 @@ def chat(query):
     chatStr += f"{response['choices'][0]['text']}\n"
     return response["choices"][0]["text"]
 
+# Function to generate AI response for a prompt and save it to a file
 def ai(prompt):
     openai.api_key = apikey
     text = f"OpenAI response for Prompt: {prompt} \n *************************\n\n"
@@ -46,9 +49,11 @@ def ai(prompt):
     with open(f"Openai/{''.join(prompt.split('intelligence')[1:]).strip() }.txt", "w") as f:
         f.write(text)
 
+# Function to make the AI speak
 def say(text):
     os.system(f'say "{text}"')
 
+# Function to take voice command from the user
 def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
