@@ -68,6 +68,12 @@ if __name__ == '__main__':
     while True:
         print("Listening...")
         query = takeCommand()
+        sites = [["youtube", "https://www.youtube.com"], ["wikipedia", "https://www.wikipedia.com"], ["google", "https://www.google.com"],]
+        for site in sites:
+            if f"Open {site[0]}".lower() in query.lower():
+                say(f"Opening {site[0]}...")
+                webbrowser.open(site[1])
+
         if "quit".lower() in query.lower():
             exit()
         else:
