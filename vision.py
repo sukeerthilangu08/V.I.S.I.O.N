@@ -88,6 +88,13 @@ if __name__ == '__main__':
             say(f"The time is {hour}:{min}")
             continue
 
+        # Music
+        if "open music" in query:
+            # Add the path to your music file here
+            musicPath = "/path/to/your/music.mp3"
+            os.system(f"open {musicPath}")
+            continue
+
         # Quit
         if "quit".lower() in query.lower():
             exit()
