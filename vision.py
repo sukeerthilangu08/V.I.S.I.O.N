@@ -85,7 +85,7 @@ if __name__ == '__main__':
         if "the time" in query:
             hour = datetime.datetime.now().strftime("%H")
             min = datetime.datetime.now().strftime("%M")
-            say(f"Sir time is {hour} bajke {min} minutes")
+            say(f"The time is {hour}:{min}")
             continue
 
         # Quit
