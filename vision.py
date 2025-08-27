@@ -95,6 +95,13 @@ if __name__ == '__main__':
             os.system(f"open {musicPath}")
             continue
 
+        # Custom Applications
+        # Add your custom applications here
+        # Example:
+        # if "open my app".lower() in query.lower():
+        #     os.system(f"open /Applications/MyApp.app")
+        #     continue
+
         # Quit
         if "quit".lower() in query.lower():
             exit()
