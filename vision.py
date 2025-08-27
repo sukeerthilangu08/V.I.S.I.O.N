@@ -7,6 +7,9 @@ import datetime
 import random
 import numpy as np
 
+def say(text):
+    os.system(f'say "{text}"')
+
 def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
