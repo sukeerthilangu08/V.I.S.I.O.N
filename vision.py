@@ -64,4 +64,12 @@ def takeCommand():
 
 if __name__ == '__main__':
     print('Welcome to V.I.S.I.O.N')
-    # Main loop will go here
+    say("Welcome to V.I.S.I.O.N")
+    while True:
+        print("Listening...")
+        query = takeCommand()
+        if "quit".lower() in query.lower():
+            exit()
+        else:
+            print("Chatting...")
+            chat(query)
